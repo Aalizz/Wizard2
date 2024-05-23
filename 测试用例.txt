@@ -1,0 +1,99 @@
+//if语句
+let a=5;
+let b=a>3;
+let c=a*99;
+if (b) {10} else{1};
+
+
+let d=if(c>a){99}else{100};
+
+//函数闭包
+let newAddr = fn(x){
+	fn(y){
+		x+y
+	}
+};
+let addTwo = newAddr(2);
+addTwo(3);
+
+
+
+//1-100求值
+>> let i=1;
+
+let count=0;
+
+while(i<101){      
+	let count=count+i;
+	let i=i+1;
+}
+count
+
+
+//打印菱形
+let ling=fn(n){
+	let i=1;
+	while(i<n+1){
+		let j=1;    
+		while(j<(n-i)/2+1){
+			puts(" ");
+			let j=j+1;
+		}
+		let j=1;
+		while(j<i+1){
+			puts("*");
+			let j=j+1;
+		}
+		puts("\n");
+		let i=i+2;
+	}
+	let i=n-2;              
+	while(i>0){
+		let j=1;
+		while(j<(n-i)/2+1){
+			puts(" ");
+			let j=j+1;
+		}
+		let j=1;
+		while(j<i+1){
+			puts("*");
+			let j=j+1;
+		}
+		puts("\n");
+		let i=i-2;
+	}
+}
+
+ling(5);
+
+// 数组测试
+let double = fn(x) { 
+	x * 2 
+};
+let a = [1, double(2), 3 * 3, 4 - 3];
+length(a)
+
+//字符串和for语句测试，匹配字母并打印
+let d=["S","1","t","2","R","i","3","n","g"];
+let isaphl=fn(n){
+	if(n>="a"){
+		if(n<="z"){
+			return true;
+		}
+	}
+	if(n>="A"){
+		if(n<="Z"){
+			return true;
+		}
+	}
+	return false;
+}
+for let i=0:i<length(d):let i=i+1{
+	if(isaphl(d[i])){
+		puts(d[i]);
+	}
+}
+
+// 哈希表测试
+let hash = {"name": "Monkey"};
+hash["name"]

@@ -1,0 +1,29 @@
+# 反汇编
+>>dis(1+1)
+
+>>if(1+1){10}else{20}
+
+>>-5
+
+>>!true
+
+>>"ab"+"cde"
+
+>>let x= [1+2,3,"abc"+"cd",3*4]
+
+>>{1:2,2:3}
+
+>>{"one":1, "two":2, "three":3}["o"+"ne"]
+>>[1,2,3][1]
+
+>> let one= fn() {1;};
+
+>> let two=fn(){let result = one();return result + result ;};
+
+>> let three = fn(two){two()+1;};
+
+>>three(two);
+
+
+>>let array= [1,2,3];
+>> push(array,1)
